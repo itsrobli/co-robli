@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    	<meta charset="utf-8">
+  	<meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1'>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<link rel="icon" href="/favicon.ico">
+  	<link rel="apple-touch-icon" href="/favicon-152.png">
+  	<link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+    <link rel="mask-icon" href="/favicon-safari-pin.svg" color="#fc7e0f">  
+  	<meta name="msapplication-TileColor" content="#fc7e0f">
+		<meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta property="fb:pages" content="119474488131346" />
+
+  	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+  	
+
+  <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/bigfoot-number.css" rel="stylesheet" /><link href="/stylesheets/custom_styles.css" rel="stylesheet" />
+  <title>Rob Li.co | A new website and 10 years on the Mac</title>
+  <meta property="og:title" content="A new website and 10 years on the Mac" />
+  <meta property="og:url" content="http://robli.co/2015/08/23/a-new-website-and-10-years-on-the-mac/" />
+  <link rel="canonical" href="http://robli.co/2015/08/23/a-new-website-and-10-years-on-the-mac/" />
+  <meta property="og:description" content="I made a new website. I wrote about it. Yeah." />
+  <meta property="og:image" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2015-08-23" />
+  <meta property="article:author" content="http://robli.co/" />
+
+</head>
+<body>
+
+  <div class="container">
+    	<div id="nav">
+		<span id="home-button"><a href="/">Rob Li.co</a></span>
+		<ul>
+			<li><a href="/archive/">Blog</a></li>
+			<li><a href="/photos/">Photos</a></li>
+			<li><a href="/about/">About</a></li>
+		</ul>
+	</div>
+    <div class="blog-post">
+      <article>
+        <header>
+          <h1>A new website and 10 years on the Mac</h1>
+        
+          <div class="article-metadata">
+
+            <time class="op-published" datetime="2015-08-23T17:14:00+10:00">Sunday, 23 August 2015</time> by <a href="/about/">Rob Li</a> - <a href="http://robli.co/2015/08/23/a-new-website-and-10-years-on-the-mac/">permalink</a>
+          
+            <time class="op-modified" datetime="2017-07-23T16:26:50+10:00"></time>
+          
+          </div>
+        </header>
+
+        <h2 id="a-new-website">A new website</h2>
+
+<p>Steve Jobs <a href="https://youtu.be/FF-tKLISfPE?t=1m46s">once said</a>:</p>
+
+<blockquote>
+  <p>You’ve got to start with the customer experience and work backwards to the technology.</p>
+</blockquote>
+
+<p>I believe this is the right approach to doing most things. Start  by thinking about the outcome you want, then figure out the how. The common mistake is to instead look at the skills and resources available, then figure out what can be created given those constraints.</p>
+
+<p>I had 3 goals for this new website.</p>
+
+<ol>
+  <li>I want the site to be fast.</li>
+  <li>I want it to be cheap to run.</li>
+  <li>I want all my <a href="/about/">stuff</a> to live in a central hub I control.</li>
+</ol>
+
+<hr />
+
+<h2 id="years-on-the-mac">10 years on the Mac</h2>
+
+<p>The Macintosh is an example of a product where the people who made it first thought about the outcome, the user experience, then figured out the technology (like <a href="http://www.folklore.org/StoryView.py?story=Round_Rects_Are_Everywhere.txt">rounded rects</a>) that were required to get there.</p>
+
+<p>The process of building this website reminded me of all the reasons why I love the Mac. All the tools I need are easily available - either pre-installed, or a simple <code>brew install $WHATEVER</code> <a href="http://brew.sh">command</a> away.</p>
+
+<p>For example, OS X runs on top of Unix. The open web is usually some flavour of Unix<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Developing for the web on the Mac is a joy because most concepts and commands are the same (e.g. file systems, permissions, tools like <code>rsync</code>). Everything feels native and familiar. When I open up the Mac terminal app and SSH into my web server it’s the same environment I’m familiar with on my Mac. <a href="https://www.ruby-lang.org/en/">Ruby</a>, <a href="http://httpd.apache.org">Apache</a>, ￼<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a>￼…it’s just all there and it’s all the same.</p>
+
+<p>The past 10 years on the Mac have been the most creative of my life simply because there is so much support out there for making things on the Mac. Beyond the tutorials, the available apps are best of breed and usually open-source. I learned photography, video editing and programming all on the Mac.</p>
+
+<p>I hope the Mac and OS X continue to evolve and stay true to themselves<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+
+<hr />
+
+<h2 id="its-just-some-implementation-detail-dont-worry-about-it">It’s just some implementation detail, don’t worry about it…</h2>
+
+<p>Execution <a href="http://robli.co/2014/10/12/Executing-on-the-vision/">is everything</a>.</p>
+
+<p>This site is far from great. But I believe a lot of the fundamental architecture and design decisions are <em>ok</em>.</p>
+
+<h3 id="solving-for-outcome-1---speed">Solving for outcome 1 - speed</h3>
+
+<p>The problem with the web in 2015 is it’s slow and bloated. Many popular sites are full of ads and tracking that make pages load slowly, suck your phone battery dry and blast noise from autoplaying videos you don’t want to watch.</p>
+
+<p>You can see below from a simple test I did on the <a href="http://smh.com.au">SMH</a> homepage I found 22 trackers active - a lot of them are advertising related. These trackers each fire off their own scripts and make additional network requests - often running long after the main webpage has loaded - chewing up battery life unnecessarily.</p>
+
+<p><a href="http://robli.co/images/2015/08/smh-trackers.png"><img src="http://robli.co/images/2015/08/smh-trackers.png" alt="" /></a></p>
+
+<p>I did two things to tackle this problem.</p>
+
+<h4 id="scripts">Scripts</h4>
+
+<p>Firstly, this site runs as little JavaScript as possible. This is an easy decision for me because I don’t need to make money off this site.</p>
+
+<p>I do run some JavaScript where it’s needed. However, I do not put any scripts in the <code>&lt;header&gt;</code> of the HTML because I don’t want anything taking priority over the rendering of the content.</p>
+
+<p>I like to use footnotes in my blogs to add little bits of info<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> but I don’t like the traditional method of linking to footnotes at the bottom of an article. It makes for a bad reading experience to have to jump up and down within an article. I use <a href="http://www.bigfootjs.com">bigfoot</a> to show the footnotes in a pop-up. The traditional footnotes are still at the bottom. As with any JavaScript library, <a href="https://jquery.com">jQuery</a> is also required. What can you do<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+
+<p>In addition, I also run <a href="http://www.google.com.au/analytics/">Google Analytics</a><sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup> to track what’s happening on this site. You can read about some of the privacy implications <a href="/privacy/">here</a>.</p>
+
+<h4 id="static-site">Static site</h4>
+
+<p>A lot of blogs use a CMS like <a href="https://wordpress.org">Wordpress</a>. I like Wordpress. My <a href="http://robertwli.com">previous effort</a> ran on Wordpress and I have been using it for almost 10 years. The problem with Wordpress is that I believe a CMS is overkill for a blog. There is no need for a server to put together a blog post for the user every time a page is requested. The page is going to be the same for every visitor!</p>
+
+<p>Building once and serving the same page to everyone is a better approach for a site like mine. This way, my server<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup> is only sending raw HTML/CSS/JavaScript to each request which is retrieved directly from the server’s file system. This minimises work done by the server which speeds up the overall request/response cycle. As a side benefit, this also bypasses many security issues that can arise from having a database backend.</p>
+
+<p><em>But</em> I don’t want to craft every single page like an animal - programming can help with that.</p>
+
+<p>I built this site using <a href="https://middlemanapp.com">Middleman</a> which is a static site generator. It programatically pieces together each page and every possible permutation of a page. That way, I can build once and then deploy.</p>
+
+<p>Middleman is quite capable so far, easy to use<sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup> and very customisable. It has dedicated blogging tools and plenty of modules to add-on functionality later.</p>
+
+<p>Some tidbits about the design:</p>
+
+<ul>
+  <li>I designed the site from the ground up and wrote a lot of custom CSS to get it looking how I wanted. The foundation is <a href="http://getbootstrap.com">Bootstrap</a> so I didn’t have to worry too much about mobile vs desktop rendering and sizes.</li>
+  <li>Why orange? I wanted the background to be white because I wanted images to blend easily into the page. I didn’t want the usual boring blue highlight colours so I opted for orange which goes well with white, I think.</li>
+</ul>
+
+<p>As a great side benefit of the static site approach, it means there is significantly less demand on the server’s resources and hence only minimum computing power is required bringing down costs and brings me to the next outcome required…</p>
+
+<h3 id="solving-for-outcome-2---server-running-costs">Solving for outcome 2 - server running costs</h3>
+
+<p>My choice in using a static site also results in minimum server requirements.</p>
+
+<p>I am using a <a href="http://digitalocean.com/">VPS</a> that costs $5/month with 512MB of memory and uses SSDs for storage. SSDs are fairly cheap now in a VPS environment, and given the limited memory, the storage performance must be top notch.</p>
+
+<p>The VPS also hosts all my other content from the <a href="http://robertwli.com/">robertwli.com</a> and robli.org domains.</p>
+
+<h3 id="solving-for-outcome-3---central-hub">Solving for outcome 3 - central hub</h3>
+
+<p>I find the web is moving to a place where everyone’s content is stored and owned by private companies like Facebook, Google and Apple. This in itself is not a bad thing. They provide great services.</p>
+
+<p>I am a believer in the power of the open web. A web where you control, store and serve your own content over the internet.</p>
+
+<h4 id="my-projects">My projects</h4>
+
+<p>My <a href="/about/">About</a> page lists all the stuff I have worked on past and present. Hopefully, I will keep adding to this page as I tackle new projects.</p>
+
+<p><a href="http://robli.co/images/2015/08/roblico-about-section.png"><img src="http://robli.co/images/2015/08/roblico-about-section.png" alt="" /></a></p>
+
+<h4 id="my-photos">My photos</h4>
+
+<p>I also finally have a <a href="/photos/">place for my photos</a> that I’m fairly happy with. Ironically, I started to learn programming because I was not happy with any of the templates the typical photo portfolio websites offered. After getting side-tracked with programming for 2 years, I circled back to the original task.</p>
+
+<p>I will be adding progressively to this as well.</p>
+
+<p><img class="img-hero" src="http://robli.co/images/2015/08/roblico-photos-section-combined.jpg" /></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>usually linux&nbsp;<a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Afterall, it’s the existence of the Mac that allows the next generaiton of computing devices like iOS devices to have the freedom to stay simple and be true to themselves.&nbsp;<a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>like this&nbsp;<a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>On the bright side, chances are you already have 4 different versions of jQuery cached on your computer.&nbsp;<a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Why? I don’t know, I guess I like to know what’s going on with the site.&nbsp;<a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>just a bare bones Linux box somewhere in <a href="https://www.digitalocean.com">Digital Ocean’s</a> farm.&nbsp;<a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>if you’re experienced with the Ruby/Rails conventions&nbsp;<a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+        <footer>
+          
+        </footer>
+
+      </article>
+    </div>
+    <div class="article-divider">
+      <i class="fa fa-ellipsis-h fa-3x"></i>
+    </div>
+    <div class="bottom-nav front-page-crumb-button">
+    <a href="/archive/">More blog posts</a>
+    </div>
+  </div>
+
+
+  <footer class="text-center x-small">
+	<p>© 2010 - 2017 Robert Li. <a href="/privacy/">Privacy policy</a>.</p>
+	<em>"a Rob Li production"</em>
+</footer>
+
+  <script src="/javascripts/jquery-1.11.3.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/bigfoot.min.js"></script>
+
+<script type="text/javascript">
+	var bigfoot = $.bigfoot(
+	{
+		actionOriginalFN: "ignore"
+	}
+	);
+	bigfoot;
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65112480-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- 
+Website last updated: 27 August 2017 at  2:27 AM. 
+-->
+</body>
+</html>
