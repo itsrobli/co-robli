@@ -30,6 +30,7 @@ body {
   font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 27px;
+  min-height: 100vh;
   color: #333;
   background-color: #fff;
   border-top: 10px solid #fc7e0f;
